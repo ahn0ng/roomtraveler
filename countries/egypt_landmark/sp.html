@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../logo.png" rel="icon" />
+    <title>Great Sphinx</title>
+    <link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+
+
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style: none;}
+
+        #aside_wrap{width: 552px;
+                    height: 600px;
+                    position:relative;
+                    left:-300px;
+                    transition: 0.8s;}
+
+
+        #aside_wrap::after{content: ""; display: block; clear: both;}
+        
+        aside{width:300px;
+            height: 730px;
+            background-color: black;
+            float: left;
+            text-align: center;}
+        
+        aside iframe{width: 280px;}
+        
+        aside p{font-size: 20px;
+                margin-top: 20px;
+                color: #fff;
+                margin-bottom: 20px;}
+
+        aside span{width:280px;
+                color:#fff;
+                margin-top: 20px;
+                margin-left: 10px;
+                display: block;
+                text-align: center;
+                font-size: 15px;
+                line-height: 20px;}
+
+        button{width:52px;
+            height: 132px;
+            background-color: black;
+            background-image: url("../../open.png");
+            outline:none;
+            border:none;
+            cursor:pointer;
+            transition: 0.8s;
+            }
+
+    </style>
+
+    <script src="../../jquery-3.6.0.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(function(){
+
+            var a = 0; //클릭하는 횟수를 담는 변수명
+            var b = 0; // 홀짝을 판단할 그릇
+
+            $("button").on("click",function(){
+                a++;
+                b = a % 2;
+            
+
+            if(b==1){
+                $("#aside_wrap").css("left","0");
+                $("button").css("background-image","url('../../close.png')");
+            }else{
+                $("#aside_wrap").css("left","-300px");
+                $("button").css("background-image","url('../../open.png')");
+            }
+
+        
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <div id="map_wrap">
+    <div class="clearfix">
+        <div id="back"><a href="../egypt.html"><img src="../../arrow.png" alt="" /></a></div>
+        <div id="landmark_name">
+            <h1>Great Sphinx</h1>
+        </div>
+    </div>
+
+<div id="aside_wrap">
+        <aside>
+            <ul>
+                <li><p>Great Sphinx</p></li>
+                <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27649.204199430787!2d31.1378587!3d29.9751038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc9d3f0a64066bda9!2sGreat%20Sphinx%20of%20Giza!5e0!3m2!1sen!2skr!4v1619423030136!5m2!1sen!2skr" width="280" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                <li><span>The Great Sphinx of Giza, commonly referred to as the Sphinx of Giza or just the Sphinx, is a limestone statue of a reclining sphinx, a mythical creature. Facing directly from West to East, it stands on the Giza Plateau on the west bank of the Nile in Giza, Egypt. The face of the Sphinx is generally believed to represent the pharaoh Khafre.
+
+                    Cut from the bedrock, the original shape of the Sphinx has been restored with layers of limestone blocks. It measures 73 m (240 ft) long from paw to tail, 20 m (66 ft) high from the base to the top of the head and 19 m (62 ft) wide at its rear haunches. It is the oldest known monumental sculpture in Egypt and is commonly believed to have been designed, sculpted, and constructed by ancient Egyptians of the Old Kingdom during the reign of the pharaoh Khafre (c. 2558–2532 BC).
+                    
+                </span></li>
+            </ul>
+        </aside>
+
+        <button></button>
+</div>
+</div>
+<div id="frame_wrap">
+    <p id="gmap">
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1619423005006!6m8!1m7!1sCAoSLEFGMVFpcE53ZTVUeEFWa1UzaXd4RDZuQmVhOGsxOWk0V2hfMm81ekpDYmhf!2m2!1d29.9751038!2d31.1378587!3f338.8829122891379!4f11.247215327515477!5f0.7820865974627469" width="1035" height="735" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</p></div></div>
+</body>
+</html>

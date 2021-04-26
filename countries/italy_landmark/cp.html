@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../logo.png" rel="icon" />
+    <title>Florence Cathedral</title>
+    <link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+
+
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style: none;}
+
+        #aside_wrap{width: 552px;
+                    height: 600px;
+                    position:relative;
+                    left:-300px;
+                    transition: 0.8s;}
+
+
+        #aside_wrap::after{content: ""; display: block; clear: both;}
+        
+        aside{width:300px;
+            height: 730px;
+            background-color: black;
+            float: left;
+            text-align: center;}
+        
+        aside iframe{width: 280px;}
+        
+        aside p{font-size: 20px;
+                margin-top: 20px;
+                color: #fff;
+                margin-bottom: 20px;}
+
+        aside span{width:280px;
+                color:#fff;
+                margin-top: 20px;
+                margin-left: 10px;
+                display: block;
+                text-align: center;
+                font-size: 15px;
+                line-height: 20px;}
+
+        button{width:52px;
+            height: 132px;
+            background-color: black;
+            background-image: url("../../open.png");
+            outline:none;
+            border:none;
+            cursor:pointer;
+            transition: 0.8s;
+            }
+
+    </style>
+
+    <script src="../../jquery-3.6.0.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(function(){
+
+            var a = 0; //클릭하는 횟수를 담는 변수명
+            var b = 0; // 홀짝을 판단할 그릇
+
+            $("button").on("click",function(){
+                a++;
+                b = a % 2;
+            
+
+            if(b==1){
+                $("#aside_wrap").css("left","0");
+                $("button").css("background-image","url('../../close.png')");
+            }else{
+                $("#aside_wrap").css("left","-300px");
+                $("button").css("background-image","url('../../open.png')");
+            }
+
+        
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <div id="map_wrap">
+    <div class="clearfix">
+        <div id="back"><a href="../italy.html"><img src="../../arrow.png" alt="" /></a></div>
+        <div id="landmark_name">
+            <h1>Florence Cathedral</h1>
+        </div>
+    </div>
+
+<div id="aside_wrap">
+        <aside>
+            <ul>
+                <li><p>Florence Cathedral</p></li>
+                <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.0000642028513!2d11.2550631!3d43.7728575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403bfe22ff5%3A0x5591438487aaf1f5!2sCathedral%20of%20Santa%20Maria%20del%20Fiore!5e0!3m2!1sen!2skr!4v1619421760325!5m2!1sen!2skr" width="280" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                <li><span>Florence Cathedral, formally the Cattedrale di Santa Maria del Fiore, is the cathedral of Florence, Italy. It was begun in 1296 in the Gothic style to a design of Arnolfo di Cambio and was structurally completed by 1436, with the dome engineered by Filippo Brunelleschi. The exterior of the basilica is faced with polychrome marble panels in various shades of green and pink, bordered by white, and has an elaborate 19th-century Gothic Revival façade by Emilio De Fabris.
+                    
+                </span></li>
+            </ul>
+        </aside>
+
+        <button></button>
+</div>
+</div>
+<div id="frame_wrap">
+    <p id="gmap">
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1619421679951!6m8!1m7!1sCAoSLEFGMVFpcE9XT2hOSWdlOE1RbTJJMXBVanhOSjZVdnF2c215R0U3QWJzR0ZO!2m2!1d43.7728575!2d11.2550631!3f354.79701171667944!4f-25.24109699723303!5f0.7820865974627469" width="1035" height="735" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</p></div></div>
+</body>
+</html>

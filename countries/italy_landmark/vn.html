@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../logo.png" rel="icon" />
+    <title>Venice</title>
+    <link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+
+
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style: none;}
+
+        #aside_wrap{width: 552px;
+                    height: 600px;
+                    position:relative;
+                    left:-300px;
+                    transition: 0.8s;}
+
+
+        #aside_wrap::after{content: ""; display: block; clear: both;}
+        
+        aside{width:300px;
+            height: 730px;
+            background-color: black;
+            float: left;
+            text-align: center;}
+        
+        aside iframe{width: 280px;}
+        
+        aside p{font-size: 20px;
+                margin-top: 20px;
+                color: #fff;
+                margin-bottom: 20px;}
+
+        aside span{width:280px;
+                color:#fff;
+                margin-top: 20px;
+                margin-left: 10px;
+                display: block;
+                text-align: center;
+                font-size: 15px;
+                line-height: 20px;}
+
+        button{width:52px;
+            height: 132px;
+            background-color: black;
+            background-image: url("../../open.png");
+            outline:none;
+            border:none;
+            cursor:pointer;
+            transition: 0.8s;
+            }
+
+    </style>
+
+    <script src="../../jquery-3.6.0.js" type="text/javascript" text="javascript"></script>
+    <script>
+        $(function(){
+
+            var a = 0; //클릭하는 횟수를 담는 변수명
+            var b = 0; // 홀짝을 판단할 그릇
+
+            $("button").on("click",function(){
+                a++;
+                b = a % 2;
+            
+
+            if(b==1){
+                $("#aside_wrap").css("left","0");
+                $("button").css("background-image","url('../../close.png')");
+            }else{
+                $("#aside_wrap").css("left","-300px");
+                $("button").css("background-image","url('../../open.png')");
+            }
+
+        
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <div id="map_wrap">
+    <div class="clearfix">
+        <div id="back"><a href="../italy.html"><img src="../../arrow.png" alt="" /></a></div>
+        <div id="landmark_name">
+            <h1>Venice
+            </h1>
+        </div>
+    </div>
+
+<div id="aside_wrap">
+        <aside>
+            <ul>
+                <li><p>Venice
+                </p></li>
+                <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179278.72852592147!2d12.247249466357854!3d45.40469869386113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eb1daf1d63d89%3A0x7ba3c6f0bd92102f!2sVenice%2C%20Metropolitan%20City%20of%20Venice%2C%20Italy!5e0!3m2!1sen!2skr!4v1619422331460!5m2!1sen!2skr" width="280" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+                <li><span>Venice is a city in northeastern Italy and the capital of the Veneto region. It is built on a group of 118 small islands that are separated by canals and linked by over 400 bridges. The islands are in the shallow Venetian Lagoon, an enclosed bay lying between the mouths of the Po and the Piave rivers. In 2020, 258,685 people resided in the Comune di Venezia, of whom around 55,000 live in the historical city of Venice. Together with Padua and Treviso, the city is included in the Padua-Treviso-Venice Metropolitan Area, which is considered a statistical metropolitan area, with a total population of 2.6 million.
+                    
+                </span></li>
+            </ul>
+        </aside>
+
+        <button></button>
+</div>
+</div>
+<div id="frame_wrap">
+    <p id="gmap">
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1619422230478!6m8!1m7!1sCAoSLEFGMVFpcFBOcTRRLVpyQ2JMVnY1V19BMHZWQUtTMFB1czhvWURFZ2NyNnUw!2m2!1d45.4406268!2d12.3221928!3f28.484418976317066!4f0.2116543219843834!5f0.7820865974627469" width="1035" height="735" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</p></div></div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="logo.png" rel="icon" />
+    <title>Invitation</title>
+   
+
+    <style>
+         *{margin:0; padding:0;}
+
+         @-ms-viewport{width:device-width;}
+        @-o-viewport{width:device-width;}
+        @-moz-viewport{width:device-width;}
+        @-webkit-viewport{width:device-width;}
+        @viewport{width:device-width;}
+
+        #invitation{width:100%;
+                background-image: url(bg_house.jpg);
+                background-size: cover;}
+
+        #button{width:200px;
+                height: 200px;
+                outline:none;
+                cursor: pointer;
+               position: relative;
+                left: 300px;
+                top:-260px;}
+        #button img{width: 200px;}
+
+        #modal_wrap,#modal{position:absolute;
+                top:0;
+                display:none;}
+        
+        #modal_wrap{width: 100%;
+                height: 950px;
+                background: rgba(0,0,0,0.4);
+                }
+
+        #modal{width:800px;
+                height: 950px;
+                background-color: antiquewhite;
+                font-size:30px;
+                text-align:center;
+                margin:0 auto;
+                left:50%;
+                margin-left:-200px;}
+        #modal p{font-size: 19px;
+                line-height: 40px;}
+
+        #postbox img{width:400px;
+                    margin-top: 350px;
+                    top:200px;
+                    position: relative;
+                    margin-left: 200px;}
+
+        #postbox{width:100%;
+            height: 750px;
+            
+           }
+
+        span img{width:100px;
+                margin-top: 20px;}
+        
+/* ----------- */
+@media only screen and (max-width:800px){
+        #invitation{width:100%;
+                background-size: cover;
+                overflow: hidden;}
+        #modal{width:100%;
+               left:200px;}
+        /* #logo{margin-top: 120px;} */
+        #modal p{font-size: 15px;}
+        #modal_wrap{display: none;
+       }
+       #postbox{position: relative;
+                left: -150px;
+                display:inline;}
+        #button{position: relative;
+                left:150px;}
+
+}
+
+        
+    </style>
+
+    <script src="jquery-3.6.0.js" type="text/javascript" text="javascript"></script>
+    <script src="main.js" type="text/javascript" text="javascript"></script>
+
+
+</head>
+
+
+<body>
+    <div id="invitation">
+        <div id=postbox>
+                <img src="img/postbox.png" alt="" />
+        </div>
+    <div id="button"><img src="img/button.png" alt="" /></div>
+   
+    <div id=modal_wrap>
+     
+    </div>
+
+    <div id=modal>
+        <h4 id="logo"><img src="logo.png" alt=""></h4>
+        <p>Dear Someone who received this letter,<br />
+            Hello, how are you doing? <br />
+            In a difficult situation, we are losing a lot of things.<br />
+             I planned to travel around the world after graduation. <br />So I was saving money to go on a trip without going anywhere during the vacation. <br />However, due to an unintended pandemic, my plans have all been ruined.<br/>
+             I finally decided to travel in my room.<br />
+             Do you like traveling? <br />
+            You like traveling, but can't you go on a trip because of the pandemic like me?<br />
+            Then would you like to travel with me in the room?<br />
+            I prepared some travel destinations that I wanted to go to.<br />
+            I hope you like the places I've prepared.<br />
+            If you're ready, press the button below.
+            </p>
+        <span><a href="load.html"><img src="img/go.png" alt=""></a></span>
+    </div>
+
+    
+    
+    </div>
+</body>
+</html>
